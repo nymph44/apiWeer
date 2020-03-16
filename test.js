@@ -1,0 +1,1 @@
+console.log(fetch('https://quotes.rest/quote/random?language=en&limit=1'));

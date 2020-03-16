@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weer API</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+</head>
+
+<body style="background-color: #181818">
+    <div class="container">
+        <!-- <div class="jumbotron" style="margin-top: -5%;"> -->
+        <div class="left">
+            <h1 class="display-4">Het weer vandaag</h1>
+            <div class="content">
+                <h2 class="display-8 mb-5">Locatie gegevens</h2>
+
+                <input class="form-control form-control-lg" type="text" id="postCode" maxlength="4" placeholder="4 cijferig postcode">
+                <br>
+                <button type="button" id="submit" class="btn btn-primary btn-lg btn-block m2">Toon weer</button>
+                <!--Locatie voor de temperaturen-->
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="attention">
+                <!--Locatie voor de map-->
+                <div id="mapid" style="z-index:0!important">
+                </div>
+
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+    <section id="weatherComparison">
+        <div class="container" width=>
+            <div class="row" style="margin-top:0%;">
+                <!-- <div class="col-12" style="margin-top:-3%;">
+                    <div id="chart" >
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                </div> -->
+                <div class="col-6">
+                    <table class="table table-sm table-dark">
+                        <thead>
+                            <tr>
+                                <th id="naamstadF" style ="width:6.25% !important;" scope="col">Stadstad</th>
+                                <th id="naamstad" style ="width:6.25% !important;" scope="col">ºC</th>
+                                <th id="naamstad" style ="width:6.25% !important;" scope="col">Wind</th>
+                                <th id="naamstad" style ="width:6.25% !important;" scope="col">H2o</th>
+                                <th id="naamstad" style ="width:6.25% !important;" scope="col">Bar</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="row" id="weatherComparisonContainer">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart" >
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-white">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> www.alexdesign.nl</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<!-- <script src="js/chart.js"></script> -->
+<script src="js/jquery.js"></script>
+<script src="js/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+
+</html>
